@@ -28,7 +28,7 @@ public class Person {
     /**
      * Every field must be present and not null.
      */
-    public Person(Name name, Phone phone, Email email, Address address, Remark  remark, Set<Tag> tags) {
+    public Person(Name name, Phone phone, Email email, Address address, Remark remark, Set<Tag> tags) {
         requireAllNonNull(name, phone, email, address, tags);
         this.name = name;
         this.phone = phone;
@@ -118,7 +118,8 @@ public class Person {
                 .append("; Address: ")
                 .append(getAddress())
                 .append("; Remark: ")
-                .append(getRemark());;
+                .append(getRemark());
+        ;
 
         Set<Tag> tags = getTags();
         if (!tags.isEmpty()) {
